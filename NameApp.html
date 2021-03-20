@@ -1,0 +1,59 @@
+<!-- Sprade Operator -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center">NAME APP</h1>
+    <script>
+      
+    
+        var nameArray= [];
+    
+        var addItem = () => {
+            const addName= prompt("Which name would you like to add");
+    
+            nameArray.push(addName);
+            console.log(nameArray);
+        }
+        
+
+       var Delete= () => {
+           var deleteName = prompt("hich name would you like to delete");
+           var Index = nameArray.indexOf(deleteName);
+           nameArray.splice(Index,1);
+       }
+
+       var Display = () => {
+           console.log(nameArray);
+       }
+
+       var start = prompt("Would you like to start NAme app (Y/N)");
+       var Request = "emptey";
+       if (start==='Y') {
+           while (Request !== "exit") {
+               Request=prompt("Please select an action : add,remove,display, or quit");
+               if (Request==='add'){
+                   addItem();
+               }else if (Request==='remove'){
+                   Delete();
+               }else if(Request==='display'){
+                   Display();
+                   
+               }
+
+               
+           }
+       }
+       alert("Thanks for using the webApp")
+           
+       
+        
+    
+    </script>
+</body>
+</html>
